@@ -80,6 +80,7 @@ export type WeatherAction =
 
 export interface AlertAction {
     type: typeof SET_ALERT;
+    payload: string;
 }
 
 export interface AlertState {
