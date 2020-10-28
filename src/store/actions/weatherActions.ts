@@ -5,7 +5,6 @@ import {
     WeatherData,
     WeatherError,
     GET_WEATHER,
-    SET_ALERT,
     SET_ERROR,
     SET_LOADING,
 } from "../types";
