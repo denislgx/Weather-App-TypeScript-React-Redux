@@ -26,7 +26,7 @@ const Weather: React.FC<WeatherProps> = ({ data }) => {
                             </p>
                             <p className="title">
                                 <img
-                                    src={`https://openweather.org/img/wn/${data.weather[0].icon}.png`}
+                                    src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`}
                                     alt=""
                                 />
                             </p>
@@ -39,10 +39,10 @@ const Weather: React.FC<WeatherProps> = ({ data }) => {
                                 <p className="mb-2">{data.main.temp}K</p>
                                 <p className="mb-2">
                                     {fahrenheit}
-                                    <sup>&#8457</sup>
+                                    <sup>&#8457;</sup>
                                 </p>
                                 <p>
-                                    {celsius} <sup>&#8451</sup>
+                                    {celsius} <sup>&#8451;</sup>
                                 </p>
                             </div>
                         </div>
@@ -60,8 +60,10 @@ const Weather: React.FC<WeatherProps> = ({ data }) => {
                         </div>
                     </div>
                     <div className="level-item has-text-centered">
-                        <p className="heading">wind</p>
-                        <p className="title">{data.wind.speed} m/s</p>
+                        <div>
+                            <p className="heading">wind</p>
+                            <p className="title">{data.wind.speed} m/s</p>
+                        </div>
                     </div>
                 </div>
             </div>

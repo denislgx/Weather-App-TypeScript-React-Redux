@@ -15,7 +15,7 @@ export const getWeather = (
     return async (dispatch) => {
         try {
             const res = await fetch(
-                `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}`
+                `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}`
             );
 
             if (!res.ok) {
@@ -30,7 +30,7 @@ export const getWeather = (
         } catch (err) {
             dispatch({
                 type: SET_ERROR,
-                payload: err.message,
+                payload: "An error has occurred! Please try again.",
             });
         }
     };
