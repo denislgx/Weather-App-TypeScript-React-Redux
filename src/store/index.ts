@@ -5,7 +5,7 @@ import thunk from "redux-thunk";
 import weatherReducer from "./reducers/weatherReducer";
 import alertReducer from "./reducers/alertReducer";
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
     weather: weatherReducer,
     alert: alertReducer,
 });
